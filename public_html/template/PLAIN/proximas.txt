@@ -1,0 +1,93 @@
+<table width="600" cellspacing="0" cellpadding="0" border="0">
+	<tr>
+		<!-- ESQUERDA -->
+		<td>
+			<table width="280" cellspacing="0" cellpadding="0" border="0">
+				<tr>
+					<!-- titulo -->
+					<td align="center" valign="middle" height="40"><font
+						face="Times New Roman, Times, serif"
+						style="font-family: 'Times New Roman', Times, serif; font-size: 16px; color: #807e73; text-transform: uppercase;">Próximas</font>
+						<font face="Arial, Helvetica, sans-serif"
+						style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; color: #807e73; text-transform: uppercase;">campanhas</font>
+					</td>
+				</tr>
+			</table>
+			<table width="280" cellspacing="0" cellpadding="0" border="0"
+				style="border: 2px dotted #DDDCCF;">
+				<tr>
+					<td align="center">
+						<table width="250" cellspacing="0" cellpadding="0" border="0">
+							<tr>
+								<!-- imagem -->
+								<td>
+									<table width="250" cellspacing="12" cellpadding="0" border="0">
+										<tr>
+											<td align="center" valign="top"><a target="_blank"
+												title="###TITLE###"
+												style="text-decoration: none;"
+												href="###LINK1###"><font
+													face="Arial, Helvetica, sans-serif"
+													style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; color: #807e73;"><img
+														width="250" height="218" border="0"
+														style="display: block;" alt="###ALT###"
+														src="###SRC###" /></font></a></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<!-- texto -->
+								<td align="center">
+									<table width="250" cellspacing="0" cellpadding="0" border="0">
+										<tr>
+											<td valign="top" align="left"><font
+												face="Times New Roman, Times, serif"
+												style="font-family: 'Times New Roman', Times, serif; font-size: 20px; color: #807e73; text-transform: uppercase; line-height: 20px;"><font
+													style="color: #807e73;">###NOMELOJA###</font></font> <br /> <font
+												face="Arial, Helvetica, sans-serif"
+												style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; color: #807e73; text-transform: uppercase; line-height: 20px;"><font
+													style="color: #807e73;">###DESCRICAO###</font></font></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr height="###ALTURA###">
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td align="center">
+									<table width="250" cellspacing="0" cellpadding="0" border="0">
+										<tr>
+											<td valign="top" align="center"><font
+												face="Times New Roman, Times, serif"
+												style="font-family: 'Times New Roman', Times, serif; font-size: 16px; color: #807e73; font-style: italic; line-height: 20px;"><font
+													style="color: #807e73;">###INICIOTERMINO###: <font
+														face="Arial, Helvetica, sans-serif"
+														style="font-family: Arial, Helvetica, sans-serif; font-style: normal;">###DATA###</font></font></font></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td align="center">
+									<table width="250" cellspacing="12" cellpadding="0" border="0">
+										<tr>
+											<td valign="top" align="center" height="28"><a
+												target="_blank"
+												style="font-family: Arial, Helvetica, sans-serif; font-size: 18px; color: #ffffff; text-decoration: none;"
+												href="###LINK2###"><font
+													face="Arial, Helvetica, sans-serif"
+													style="font-family: Arial, Helvetica, sans-serif; font-size: 18px; color: #ffffff"><strong><img
+															width="136" height="28" border="0" alt="Compre Agora"
+															style="display: block;"
+															src="http://n.westwing.com.br/images/4370/M-4370-3218695-botao_comprar_peq.jpg" /></strong></font></a></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>

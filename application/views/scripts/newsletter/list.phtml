@@ -1,0 +1,33 @@
+<?php
+echo $this->render('layout/header.phtml');
+?>
+<form action="/newsletter/edit/" method="get">
+	<table>
+		<thead>
+			<tr>
+				<td><label for="nl_id">id</label></td>
+				<td><label for="nl_name">Nome</label></td>
+				<td><label for="nl_name">Data de Envio</label></td>
+				<td><label for="nl_name">Data de Criação</label></td>
+				<td><label for="nl_name">Editar</label></td>
+			</tr>
+		</thead>
+		<tbody>
+		<?php
+		foreach($this->newsletterList as $nl){
+			?>
+			<tr>
+				<td><?=$nl['nl_id']?></td>
+				<td id="<?=$nl['nl_id']?>-nl_name" class="text"><?=$nl['nl_name']?></td>
+				<td id="<?=$nl['nl_id']?>-nl_submit_date" class="date"><?=$nl['nl_submit_date']?></td>
+				<td><?=$nl['nl_timestamp']?></td>
+				<td><a href="/newsletter/edit/id/<?=$nl['nl_id']?>"><img src="/img/icons/edit.png" /></a></td>
+			</tr>
+			<?php
+		}
+		?>
+		</tbody>
+	</table>
+</form>
+<?php
+echo $this->render('layout/footer.phtml');

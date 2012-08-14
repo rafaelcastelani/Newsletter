@@ -1,0 +1,16 @@
+<?php if ($this->loginFailed == true) { ?>
+	<div id="login_failed">
+		Login Failed
+	</div>
+<?php } ?>
+<form method="post" action="<?php echo $this->escape($this->url(array('controller' => 'login', 'action' => 'login')));?>">
+<?php 
+echo $this->formLabel('login', 'Nome de usuário',array('class'=>'titulo'));
+echo $this->formText('username', $this->username, array('class'=>'required formadmin','maxlength' => 50, 'size' => 20,'id'=>'login'));
+?>
+<?
+echo $this->formLabel('senha', 'Senha',array('class'=>'titulo'));
+echo $this->formPassword('password', '', array('class'=>'required formadmin','maxlength' => 50, 'size' => 20,'id'=>'senha'));
+echo $this->formHidden('uri',$this->uri);
+?><p id="confirmar"><label for="login" class="buttonok"><input src="/images/bnt-ok.jpg" type="image" name="submit" id="submit" value="Login" /> <?php // echo $this->formReset('reset', 'Redefinir'); ?></label></p>
+</form>

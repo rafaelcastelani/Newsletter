@@ -1,0 +1,65 @@
+<?php
+echo $this->render('layout/header.phtml');
+?>
+<form action="/campanha/save/" method="post">
+	<table>
+		<tbody>
+			<tr>
+				<td><label for="is_magazine">Ativo?</label></td>
+				<td><input type="checkbox" name="is_active" id="is_active" checked="checked"/></td>
+			</tr>
+			<tr>
+				<td><label for="is_magazine">Revista?</label></td>
+				<td><input type="checkbox" name="is_magazine" id="is_magazine" /></td>
+			</tr>
+			<tr>
+				<td><label for="is_banner">Banner?</label></td>
+				<td><input type="checkbox" name="is_banner" id="is_banner" /></td>
+			</tr>
+			<tr>
+				<td><label for="name_campanha">Nome da Campanha</label></td>
+				<td><input style="min-width: 500px;" type="text" name="name_campanha" id="name_campanha" /></td>
+			</tr>
+			<tr>
+				<td><label for="subline">Subline</label></td>
+				<td><input style="min-width: 500px;" type="text" name="subline" id="subline" /></td>
+			</tr>
+			<tr>
+				<td><label for="url_campanha">URL da campanha</label></td>
+				<td><input style="min-width: 500px;" type="text" name="url_campanha" id="url_campanha" value="http://www.westwing.com.br/" /></td>
+			</tr>
+			
+			<tr>
+				<td><label for="start_date">Data de início</label></td>
+				<td><input style="min-width: 500px;" type="text" name="start_date" id="start_date" /></td>
+			</tr>
+			<tr>
+				<td><label for="end_date">Data de fim</label></td>
+				<td><input style="min-width: 500px;" type="text" name="end_date" id="end_date" /></td>
+			</tr>
+			<tr>
+				<td><label for="url_proxima">URL IMG (Próximas 250x218)</label></td>
+				<td><input style="min-width: 500px;" type="text" name="url_proxima" id="url_proxima"  /></td>
+			</tr>
+			<!-- <tr>
+				<td><label for="url_em_andamento">URL IMG (Em Andamento 548x220)</label></td>
+				<td><input style="min-width: 500px;" type="text" name="url_em_andamento" id="url_em_andamento"  /></td>
+			</tr> -->
+			<tr>
+				<td><label for="url_ultimos_dias">URL IMG (Últimos Dias 548x220)</label></td>
+				<td><input style="min-width: 500px;" type="text" name="url_ultimos_dias" id="url_ultimos_dias" /></td>
+			</tr>
+			<tr>
+				<td><label for="url_nova_oferta">URL IMG (Nova Oferta 548x319)</label></td>
+				<td><input style="min-width: 500px;" type="text" name="url_nova_oferta" id="url_nova_oferta"  /></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" name="submit" id="submit" value="Salvar Campanha" /></td>
+			</tr>
+		</tbody>
+	</table>
+</form>
+
+<?php 
+echo $this->render('layout/footer.phtml');

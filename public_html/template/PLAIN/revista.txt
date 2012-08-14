@@ -1,0 +1,3 @@
+###NOMELOJA###
+###DESCRICAO###
+Leia a matéria (###LINK###)

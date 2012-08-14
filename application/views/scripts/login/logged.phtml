@@ -1,0 +1,15 @@
+<?php
+header('Content-type: text/xml');
+//echo "<html><head></head><body></body></html>";
+echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
+echo "<statuses type=\"array\">
+	<status>
+	  <user>
+	  	<name>".$this->username."</name>
+	  	<photo>".$this->picture."</photo>
+	  	<company>".$this->company."</company>
+		<valid>".$this->logged."</valid>
+	  </user>
+	</status>
+	</statuses>";
+?>

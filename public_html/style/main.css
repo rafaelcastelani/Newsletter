@@ -1,0 +1,84 @@
+/*### GENERAL ### */
+body { /*background:url('../img/bodybg.png') no-repeat;
+	-moz-opacity:0.5;
+	height:500px;*/
+	background: #FFF;
+	overflow-x: hidden;
+	overflow-y: auto;
+	font-family: arial;
+	font-size: 12px;
+	color:#4a4a4a;
+}
+
+/* #### HEADER #### */
+#menu {
+	margin: 10px auto 10px auto;
+	text-align: center;
+	
+}
+
+#menu a {
+	color: #cdcdcd;
+}
+
+#menu a:hover {
+	color: #adadad;
+}
+
+#date {
+	text-align:center;
+	margin: 0 auto  40px auto;
+	color: #cdcdcd;
+	font-weight: bold;
+}
+
+
+/* #### CONTENT #### */
+
+form {
+}
+
+form table {
+	margin:auto;
+}
+
+form table tr {
+	border: 1px solid #cecece;	
+}
+
+form table tr td {
+	border: 1px solid #cecece;
+	padding: 3px;
+	text-align:center;
+}
+
+form table tr td img {
+	width: 20px;
+	height: 20px;
+	cursor:pointer;
+}
+
+form table tr td input[type=text]{
+	border:0;
+}
+input {
+	width:100%;
+}
+
+/* #### FOOTER #### */
+#footer {
+	background: url('../img/footer/background.png') repeat-x;
+	width: 100%;
+	height: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+

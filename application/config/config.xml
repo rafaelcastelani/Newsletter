@@ -1,0 +1,24 @@
+<?xml  version="1.0" encoding="UTF-8"?>
+<configdata>
+	<production>
+		<db>
+			<adapter>PDO_MYSQL</adapter>
+			<config>
+				<host>host</host>
+				<username>user</username>
+				<password>pass</password>
+				<dbname>dbname</dbname>
+			</config>
+		</db>
+	</production>
+	<staging extends="production">
+		<db>
+			<config>
+				<host>localhost</host>
+				<username>westwing_nl</username>
+				<password>pKmvudSCFEvwK5xh</password>
+				<dbname>westwing_newsletter</dbname>
+			</config>
+		</db>
+	</staging>
+</configdata>

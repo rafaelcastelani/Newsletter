@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de-DE" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Westwing Newsletter</title>
+
+<?php 
+if(isset($this->styles) && is_array($this->styles)){
+	foreach($this->styles as $style){
+		echo "<link href=\"/style/$style\" media=\"all\" rel=\"stylesheet\"/>\n";
+	}
+}
+?>
+<?php 
+if(isset($this->scripts) && is_array($this->scripts)){
+	foreach($this->scripts as $script){
+		echo "<script type=\"text/javascript\" src=\"/js/$script\"></script>\n";
+	}
+}
+?>
+</head>
+<body style="width: 100%; margin: 0; padding: 0; -webkit-text-size-adjust: none;">
+	<div id="menu">
+		<a href="/campanha/add">adicionar campanha</a> |
+		<a href="/campanha/list">listar campanhas</a> <a href="/campanha/list/all/1"> (todas)</a> |
+		<a target="_blank" href="/newsletter/generateHTML">Gerar NewsLetter (HTML)</a> <a target="_blank" href="/newsletter/generateHTML/plain/1">source</a><!-- |
+		 <a target="_blank" href="/newsletter/generatePLAIN">Gerar NewsLetter (PLAIN)</a> -->
+	</div>
+	<div id="date"><?php $date = new DateTime(); echo $date->format("Y-m-d G:i:s");?></div>

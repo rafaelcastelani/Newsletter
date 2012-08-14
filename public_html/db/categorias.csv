@@ -1,0 +1,85 @@
+﻿Large Furniture;
+Mesa de Jantar;10000
+couch/sofa;10001
+cabinet/closet/cupboard;10002
+desk;10003
+shelf ;10004
+bed;10005
+various;10999
+Single/Small Furniture;
+coffee table;11000
+chair;11001
+armchair;11002
+stool;11003
+wardrobe;11004
+commode/sidebord;11005
+various;11999
+Decoração/Acessórios;
+vase;12000
+bowl;12001
+mirror;12002
+box;12003
+candle;12004
+candleholder;12005
+Coffee book;12006
+stationary;12007
+clock;12008
+various;12999
+Mesa;
+dishes/porcelain;13000
+cutlery;13001
+crystal/glassware;13002
+various;13999
+Cozinha;
+pot/pan;14000
+kitchen equipment (electr);14001
+Kitchen tools;14002
+various;14999
+Têxteis;
+Cushion;15000
+Plaids;15001
+tablecloth/napkin;15002
+curtain;15003
+bed linen/bedclothes ;15004
+mattress;15005
+scarf ;15006
+various;15999
+Arte/Desenho/Fotografia;
+various;16999
+Iluminação;
+floor lamp/standing lamp;17000
+table lamp;17001
+wall lamp;17002
+ceiling lamp;17003
+various;17999
+Tapetes;
+rugs;18000
+various;18999
+Crianças;
+furniture;19000
+accessories;19001
+various;19999
+Outdoor;
+furniture;20000
+accessories;20001
+various;20999
+Banho;
+towel;21000
+bath mat;21001
+bath robe;21002
+various;21999
+Animais;
+animals;22000
+various;22999
+Gourmet;
+food;23000
+beverages;23001
+various;23999
+Outros;
+Newsletter Header;99000
+Convide um Amigo;99001
+Facebook;99002
+Sobre a WestWing;99003
+Legal Note;99004
+Unsubscribe;99005
+Revista;99006

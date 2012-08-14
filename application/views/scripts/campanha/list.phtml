@@ -1,0 +1,53 @@
+<?php
+echo $this->render('layout/header.phtml');
+
+?>
+<form action="/campanha/edit/" method="get">
+	<table>
+		<thead>
+			<tr>
+				<td><label for="id_campanha">id</label></td>
+				<td><label for="name_campanha">Ativo?</label></td>
+				<td><label for="name_campanha">Revista?</label></td>
+				<td><label for="name_campanha">Banner?</label></td>
+				<td><label for="name_campanha">Prioridade</label></td>
+				<td><label for="name_campanha">Nome da Campanha</label></td>
+				<td><label for="subline">Subline</label></td>
+				<td><label for="url_campanha">URL da campanha</label></td>
+				<td><label for="start_date">Data de início</label></td>
+				<td><label for="end_date">Data de fim</label></td>
+				<td><label for="url_proxima">URL IMG (Próximas 250x218)</label></td>
+				<!-- <td><label for="url_em_andamento">URL IMG (Em Andamento 548x220)</label></td> -->
+				<td><label for="url_ultimos_dias">URL IMG (Últimos Dias 548x220)</label></td>
+				<td><label for="url_nova_oferta">URL IMG (Nova Oferta 548x319)</label></td>
+			</tr>
+		</thead>
+		<tbody>
+		<?php
+		foreach($this->campaignList as $ci){
+			
+			?>
+			<tr>
+				<td><?=$ci['id_campanha']?></td>
+				<td id="<?=$ci['id_campanha']?>-is_active" class="check"><input type="checkbox" <?=($ci['is_active'])?"checked=\"checked\"":""?>/></td>
+				<td id="<?=$ci['id_campanha']?>-is_magazine" class="check"><input type="checkbox" <?=($ci['is_magazine'])?"checked=\"checked\"":""?>/></td>
+				<td id="<?=$ci['id_campanha']?>-is_banner" class="check"><input type="checkbox" <?=($ci['is_banner'])?"checked=\"checked\"":""?>/></td>
+				<td id="<?=$ci['id_campanha']?>-priority" class="priority"><?=$ci['priority']?></td>
+				<td id="<?=$ci['id_campanha']?>-name_campanha" class="text"><?=$ci['name_campanha']?></td>
+				<td id="<?=$ci['id_campanha']?>-subline" class="text"><?=$ci['subline']?></td>
+				<td id="<?=$ci['id_campanha']?>-url_campanha" class="text"><?=$ci['url_campanha']?></td>
+				<td id="<?=$ci['id_campanha']?>-start_date" class="date"><?=$ci['start_date']?></td>
+				<td id="<?=$ci['id_campanha']?>-end_date" class="date"><?=$ci['end_date']?></td>
+				<td id="<?=$ci['id_campanha']?>-url_proxima" class="text"><?=$ci['url_proxima']?></td>
+				<!-- <td id="<?=$ci['id_campanha']?>-url_em_andamento" class="text"><?=$ci['url_em_andamento']?></td> -->
+				<td id="<?=$ci['id_campanha']?>-url_ultimos_dias" class="text"><?=$ci['url_ultimos_dias']?></td>
+				<td id="<?=$ci['id_campanha']?>-url_nova_oferta" class="text"><?=$ci['url_nova_oferta']?></td>
+			</tr>
+			<?php
+		}
+		?>
+		</tbody>
+	</table>
+</form>
+<?php
+echo $this->render('layout/footer.phtml');

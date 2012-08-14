@@ -1,0 +1,25 @@
+<?php
+echo $this->render('layout/header.phtml');
+?>
+<form action="/newsletter/save/" method="post">
+	<table>
+		<tbody>
+			<tr>
+				<td><label for="nl_name">Nome para identificação</label></td>
+				<td><input style="min-width: 350px;" type="text" name="nl_name" id="nl_name" /></td>
+			</tr>
+			<tr>
+				<td><label for="nl_submit_date">Data de envio da newsletter</label></td>
+				<td><input style="min-width: 350px;" type="text" name="nl_submit_date" id="nl_submit_date" /></td>
+			</tr>
+
+			<tr>
+				<td></td>
+				<td><input type="submit" name="submit" id="submit" value="Salvar Bloco" /></td>
+			</tr>
+		</tbody>
+	</table>
+</form>
+
+<?php 
+echo $this->render('layout/footer.phtml');
