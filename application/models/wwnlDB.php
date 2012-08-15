@@ -245,41 +245,54 @@ class wwnlDB extends Zend_Db_Table {
 		return $string;
 	}
 	
-	public function generateHtmlInviteFooter($date){
+		public function generateHtmlInviteFooter($date){
 		$string = file_get_contents("template/HTML/invite_footer.php");;
+ 	
+ 	        $date_string= $date->format("Ymd");
+       
+            $string = str_replace("###NEWS-DATE###",$date_string,$string);
+ 
+ 		return $string; 
+ 	}
+	
+	
+	public function generateHtmlInvite($count,$date){
+		$string = file_get_contents("template/HTML/invite.php");
+		$string = str_replace("###COUNT###", trim($count), $string);
 	
 	        $date_string= $date->format("Ymd");
-	        $string = str_replace("###NEWS-DATE###",$date_string,$string);
-          
+                $string = str_replace("###NEWS-DATE###",$date_string,$string);
 
 		return $string; 
 	}
 	
-	public function generateHtmlBannerShop($count,$date){
-                
-        	$date_string_compare= $date->format("D");
-		
-		if( $date_string_compare == 'Thu' xor $date_string_compare == 'Tue'){
-		   $string = file_get_contents("template/HTML/banner_shop.php");
-                }else{
-
-		$string = file_get_contents("template/HTML/banner_bestsellers.php");
-                }
-
-		$string = str_replace("###COUNT###", trim($count), $string);                
-		$date_string= $date->format("Ymd");		
-		
-                $string = str_replace("###NEWS-DATE###",$date_string,$string);
-
-
-                return $string;
-        }
-        
-
 	public function generateHtmlFooter(){
 		$string = file_get_contents("template/HTML/facebookfooter.php");
 		return $string;
 	}
+	
+		public function generateHtmlBannerShop($count,$date){
+		
+	       	$date_string_compare= $date->format("D");
+		
+			if( $date_string_compare == 'Thu' xor $date_string_compare == 'Tue'){
+					   $string = file_get_contents("template/HTML/banner_shop.php");
+			                }else{
+				
+						$string = file_get_contents("template/HTML/banner_bestsellers.php");
+				                }
+				
+						$string = str_replace("###COUNT###", trim($count), $string);
+						$date_string= $date->format("Ymd");
+				
+				                $string = str_replace("###NEWS-DATE###",$date_string,$string);
+				
+				
+				               return $string;
+		        }
+	
+				
+				
 	public function getURL($simpleUrl,$type_code,$date,$target,$pos){
 		
 		$url_key=$simpleUrl;
@@ -363,6 +376,31 @@ class wwnlDB extends Zend_Db_Table {
 		$head = str_replace("###SECTION-SECOND-NAME###", trim($secondName), $head);
 	
 		return $head;
+	}
+	
+	public function getProduct($newsDate = null){
+		$start_date = new DateTime();
+		$start_date->setTime(20,0,0);
+		$start_date->setDate($newsDate->format("Y"), $newsDate->format("m"), $newsDate->format("d")-1);
+	
+		$end_date = new DateTime();
+		$end_date->setTime(10,0,0);
+		$end_date->setDate($newsDate->format("Y"), $newsDate->format("m"), $newsDate->format("d"));
+	
+	
+		$select = new Zend_Db_Select($this->getDefaultAdapter());
+		$select->from(array ('c' => $this->_campanha) );
+		$select->where('start_date = ?',$start_date->format("Y-m-d H:i:s"));
+		$select->where('start_date = end_date');
+		$select->where('is_banner = ?','0');
+		$select->where('is_magazine = ?','0');
+		$select->where('is_product = ?','1');
+		$select->where('is_active = ?','1');
+		$select->order("priority DESC");
+		$select->order("end_date ASC");
+		$select->limit(1);
+	
+		return ($this->_db->fetchAssoc ( $select )) ;
 	}
 	
 	public function generatePlainSection($link = null, $name = null,$desc = null,$startend = null,$date = null,$time = null){
