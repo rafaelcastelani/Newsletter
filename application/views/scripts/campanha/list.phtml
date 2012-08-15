@@ -10,6 +10,7 @@ echo $this->render('layout/header.phtml');
 				<td><label for="name_campanha">Ativo?</label></td>
 				<td><label for="name_campanha">Revista?</label></td>
 				<td><label for="name_campanha">Banner?</label></td>
+				<td><label for="name_campanha">Produto?</label></td>
 				<td><label for="name_campanha">Prioridade</label></td>
 				<td><label for="name_campanha">Nome da Campanha</label></td>
 				<td><label for="subline">Subline</label></td>
@@ -32,6 +33,7 @@ echo $this->render('layout/header.phtml');
 				<td id="<?=$ci['id_campanha']?>-is_active" class="check"><input type="checkbox" <?=($ci['is_active'])?"checked=\"checked\"":""?>/></td>
 				<td id="<?=$ci['id_campanha']?>-is_magazine" class="check"><input type="checkbox" <?=($ci['is_magazine'])?"checked=\"checked\"":""?>/></td>
 				<td id="<?=$ci['id_campanha']?>-is_banner" class="check"><input type="checkbox" <?=($ci['is_banner'])?"checked=\"checked\"":""?>/></td>
+				<td id="<?=$ci['id_campanha']?>-is_product" class="check"><input type="checkbox" <?=($ci['is_product'])?"checked=\"checked\"":""?>/></td>
 				<td id="<?=$ci['id_campanha']?>-priority" class="priority"><?=$ci['priority']?></td>
 				<td id="<?=$ci['id_campanha']?>-name_campanha" class="text"><?=$ci['name_campanha']?></td>
 				<td id="<?=$ci['id_campanha']?>-subline" class="text"><?=$ci['subline']?></td>

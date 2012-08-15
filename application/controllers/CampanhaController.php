@@ -24,6 +24,7 @@ class CampanhaController extends BaseController {
 			"url_ultimos_dias"	=>	trim($this->_getParam("url_ultimos_dias")),
 			"is_magazine"		=>	($this->_getParam("is_magazine")=="on")?1:0,
 			"is_banner"			=>	($this->_getParam("is_banner")=="on")?1:0,
+			"is_product"		=>  ($this->_getParam("is_product")=="on")?1:0,
 			"is_active"			=>	($this->_getParam("is_active")=="on")?1:0
 			
 		);

@@ -3,7 +3,7 @@ $(document).ready(function(){
 											dateFormat: 'yy-mm-dd',
 											timeFormat: 'hh:mm:ss'});
 	
-	$("#is_magazine, #is_banner").bind("change",function(){
+	$("#is_magazine, #is_banner , #is_product ").bind("change",function(){
 	    if(this.checked){
 	        $("#url_nova_oferta,#url_em_andamento,#url_ultimos_dias,#type_code").attr("readonly","readonly");
 	        $("#url_nova_oferta,#url_em_andamento,#url_ultimos_dias").val("--");
